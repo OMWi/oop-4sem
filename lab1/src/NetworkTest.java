@@ -3,7 +3,7 @@ import printer.*;
 
 import java.util.Scanner;
 
-public class Main {
+public class NetworkTest {
 
     static Scanner scanner = new Scanner(System.in);
 
