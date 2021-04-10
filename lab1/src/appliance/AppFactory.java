@@ -2,10 +2,8 @@ package appliance;
 
 public class AppFactory {
 
-    public static AbstractApp createApp(AppType type)
-    {
-        switch (type)
-        {
+    public static AbstractApp createApp(AppType type) {
+        switch (type) {
             case KETTLE:
                 return new Kettle();
             case  DRILL:

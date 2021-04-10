@@ -7,15 +7,13 @@ public class NetworkTest {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Network network = NetworkFactory.createNetwork();
 
-        while(true)
-        {
+        while(true) {
             char option = getOption();
             AppPrinter.printNetwork(network.getAppliances());
-            switch (option)
-            {
+            switch (option) {
                 case 'q':
                     return;
                 case 'a':
@@ -107,11 +105,12 @@ public class NetworkTest {
         }
     }
 
-    public static AppType getType()
-    {
-        AppType type = AppType.DRILL;
+    public static AppType getType() throws Exception {
+
+       // AppType type;// = AppType.DRILL;
         boolean error = true;
         int index = 1;
+
         while(error) {
             error = false;
             System.out.println("Choose appliance type:");
@@ -122,29 +121,35 @@ public class NetworkTest {
             try {
                 index = scanner.nextInt();
                 scanner.nextLine();
-                if (index > AppType.values().length || index < 1) {
+/*                if (index > AppType.values().length || index < 1) {
                     throw new IndexOutOfBoundsException();
-                }
-            } catch (Exception exception) {
+                }*/
+            }catch (IndexOutOfBoundsException eIndex){
+
+            }
+            catch (Exception exception) {
                 System.out.println("Error: " + exception.getLocalizedMessage());
                 error = true;
             }
         }
+
         switch (index) {
             case 1:
-                type = AppType.DRILL;
-                break;
+                return AppType.DRILL;
+
             case 2:
-                type = AppType.CHAINSAW;
-                break;
+                return AppType.CHAINSAW;
+               // break;
             case 3:
-                type = AppType.WASHER;
-                break;
+                return AppType.WASHER;
+                //break;
             case 4:
-                type = AppType.KETTLE;
-                break;
+                return AppType.KETTLE;
+               // break;
+            default:
+                throw new Exception("wrong");
         }
-        return type;
+
     }
 
     public static int getIndex(Network network)

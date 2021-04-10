@@ -29,13 +29,12 @@ public class Network {
         _appliances.remove(index);
     }
 
-    public void removeApp(AbstractApp appliance)
-    {
+    public void removeApp(AbstractApp appliance) {
         _appliances.remove(appliance);
     }
 
-    public void addApp(AbstractApp newAppliance)
-    {
+    public void addApp(AbstractApp newAppliance) {
         _appliances.add(newAppliance);
     }
+
 }

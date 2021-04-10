@@ -3,27 +3,39 @@ package appliance;
 import appliance.AbstractHouseholdApp;
 
 public class Kettle extends AbstractHouseholdApp {
-    public double coeff;
+    public double coefficient;
 
-    public void setCoeff(double coeff)
+    public void setCoefficient(double coefficient)
     {
-        this.coeff = coeff;
+        this.coefficient = coefficient;
     }
 
     public double getPower()
     {
-        return power*coeff;
+        return power*coefficient;
     }
 
     public Kettle()
     {
-        coeff =  0.9;
+        coefficient =  0.9;
     }
 
-    public Kettle(int power, int price, String color)
-    {
+    public Kettle(int power, int price, String color) {
         this.power = power;
         this.price = price;
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        String data;
+        if (getEnabled() == true){
+            data = " Enabled";
+        }
+        else {
+            data = " Disabled";
+        }
+        data += " Power: " + getPower() + " Price: " + getPrice() + " Color: " + getColor();
+        return data;
     }
 }

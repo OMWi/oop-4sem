@@ -3,21 +3,21 @@ package appliance;
 import appliance.AbstractIndustrialApp;
 
 public class Chainsaw extends AbstractIndustrialApp {
-    public double coeff;
+    public double coefficient;
 
-    public void setCoeff(double coeff)
+    public void setCoefficient(double coefficient)
     {
-        this.coeff = coeff;
+        this.coefficient = coefficient;
     }
 
     public double getPower()
     {
-        return power*coeff;
+        return power*coefficient;
     }
 
     public Chainsaw()
     {
-        coeff = 1.4;
+        coefficient = 1.4;
     }
 
     public Chainsaw(int power, int price, String industry)
@@ -25,5 +25,18 @@ public class Chainsaw extends AbstractIndustrialApp {
         this.power = power;
         this.price = price;
         this.industry = industry;
+    }
+
+    @Override
+    public String toString() {
+        String data;
+        if (getEnabled() == true){
+            data = " Enabled";
+        }
+        else {
+            data = " Disabled";
+        }
+        data += " Power: " + getPower() + " Price: " + getPrice() + " Industry: " + getIndustry();
+        return data;
     }
 }
