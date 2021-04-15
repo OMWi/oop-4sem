@@ -5,18 +5,15 @@ import appliance.AbstractHouseholdApp;
 public class Kettle extends AbstractHouseholdApp {
     public double coefficient;
 
-    public void setCoefficient(double coefficient)
-    {
+    public void setCoefficient(double coefficient) {
         this.coefficient = coefficient;
     }
 
-    public double getPower()
-    {
+    public double getPower() {
         return power*coefficient;
     }
 
-    public Kettle()
-    {
+    public Kettle() {
         coefficient =  0.9;
     }
 
@@ -29,13 +26,13 @@ public class Kettle extends AbstractHouseholdApp {
     @Override
     public String toString() {
         String data;
-        if (getEnabled() == true){
-            data = " Enabled";
+        if (getEnabled() == true) {
+            data = "Enabled";
         }
         else {
-            data = " Disabled";
+            data = "Disabled";
         }
-        data += " Power: " + getPower() + " Price: " + getPrice() + " Color: " + getColor();
+        data += "  Power: " + getPower() + "  Price: " + getPrice() + "  Color: " + getColor();
         return data;
     }
 }

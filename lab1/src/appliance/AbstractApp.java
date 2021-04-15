@@ -7,37 +7,29 @@ public abstract class AbstractApp {
     public double power;
     public double price;
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
-    public boolean getEnabled()
-    {
+    public boolean getEnabled() {
         return enabled;
     }
-    public void setEnabled(boolean enabled)
-    {
+    public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
-    public double getPower()
-    {
+    public double getPower() {
         return power;
     }
-    public void setPower(double power)
-    {
+    public void setPower(double power) {
         this.power = power;
     }
-    public double getPrice()
-    {
+    public double getPrice() {
         return price;
     }
-    public void setPrice(double price)
-    {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public AbstractApp()
-    {
+    public AbstractApp() {
         id = ID;
         ID++;
     }

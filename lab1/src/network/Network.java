@@ -1,11 +1,11 @@
-package appliance;
+package network;
 
 import appliance.AbstractApp;
 
 import java.util.ArrayList;
 
 public class Network {
-    private ArrayList<AbstractApp> _appliances;
+    private final ArrayList<AbstractApp> _appliances;
 
     public ArrayList<AbstractApp> getAppliances() {
         return _appliances;

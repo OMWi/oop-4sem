@@ -17,12 +17,12 @@ public class AppPrinter {
             System.out.print(index++ + ". ");
             printApp(app);
         }
+        System.out.println();
     }
 
     public static void printApp(AbstractApp app) {
-        System.out.println("Appliance(id = " + app.getId() + "):");
-        System.out.println(app.toString());
-        System.out.println();
+        System.out.print("Appliance(id = " + app.getId() + "):");
+        System.out.println(app);
     }
 
 }

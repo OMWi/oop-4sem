@@ -3,18 +3,15 @@ package appliance;
 public abstract class AbstractIndustrialApp extends AbstractApp {
     public String industry;
 
-    public String getIndustry()
-    {
+    public String getIndustry() {
         return industry;
     }
 
-    public void setIndustry(String industry)
-    {
+    public void setIndustry(String industry) {
         this.industry = industry;
     }
 
-    public AbstractIndustrialApp()
-    {
+    public AbstractIndustrialApp() {
         industry = "unknown industry";
     }
 }

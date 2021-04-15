@@ -26,13 +26,13 @@ public class Washer extends AbstractHouseholdApp {
     @Override
     public String toString() {
         String data;
-        if (getEnabled() == true){
-            data = " Enabled";
+        if (getEnabled() == true) {
+            data = "Enabled";
         }
         else {
-            data = " Disabled";
+            data = "Disabled";
         }
-        data += " Power: " + getPower() + " Price: " + getPrice() + " Color: " + getColor();
+        data += "  Power: " + getPower() + "  Price: " + getPrice() + "  Color: " + getColor();
         return data;
     }
 }

@@ -5,18 +5,15 @@ import appliance.AbstractIndustrialApp;
 public class Chainsaw extends AbstractIndustrialApp {
     public double coefficient;
 
-    public void setCoefficient(double coefficient)
-    {
+    public void setCoefficient(double coefficient) {
         this.coefficient = coefficient;
     }
 
-    public double getPower()
-    {
+    public double getPower() {
         return power*coefficient;
     }
 
-    public Chainsaw()
-    {
+    public Chainsaw() {
         coefficient = 1.4;
     }
 
@@ -31,12 +28,12 @@ public class Chainsaw extends AbstractIndustrialApp {
     public String toString() {
         String data;
         if (getEnabled() == true){
-            data = " Enabled";
+            data = "Enabled";
         }
         else {
-            data = " Disabled";
+            data = "Disabled";
         }
-        data += " Power: " + getPower() + " Price: " + getPrice() + " Industry: " + getIndustry();
+        data += "  Power: " + getPower() + "  Price: " + getPrice() + "  Industry: " + getIndustry();
         return data;
     }
 }

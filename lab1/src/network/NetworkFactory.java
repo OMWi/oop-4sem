@@ -1,4 +1,6 @@
-package appliance;
+package network;
+
+import network.Network;
 
 public class NetworkFactory {
 

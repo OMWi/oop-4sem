@@ -1,4 +1,6 @@
 import appliance.*;
+import network.Network;
+import network.NetworkFactory;
 import printer.*;
 
 import java.util.Scanner;
@@ -11,9 +13,9 @@ public class NetworkTest {
         Network network = NetworkFactory.createNetwork();
 
         while(true) {
-            char option = getOption();
+            char command = getCommand();
             AppPrinter.printNetwork(network.getAppliances());
-            switch (option) {
+            switch (command) {
                 case 'q':
                     return;
                 case 'a':
@@ -40,48 +42,35 @@ public class NetworkTest {
         }
     }
 
-    public static char getOption()
-    {
-        char option;
-        try
-        {
+    public static char getCommand() {
+        char command;
+        try {
             System.out.print("Enter command('h' - help): ");
-            option = scanner.nextLine().charAt(0);
+            command = scanner.nextLine().charAt(0);
         }
-        catch (Exception exception)
-        {
+        catch (Exception exception) {
             System.out.println("Error:" + exception.getLocalizedMessage());
-            option = 'q';
+            command = 'q';
         }
-        return option;
+        return command;
     }
 
-    public static void printHelp()
-    {
+    public static void printHelp() {
         System.out.println("'q' - quit program");
         System.out.println("'a' - add new appliance to the network");
         System.out.println("'r' - remove appliance from the network");
         System.out.println("'p' - show total consuming power");
     }
 
-    public static void getAppData(AbstractApp app)
-    {
+    public static void getAppData(AbstractApp app) {
         try {
             System.out.println("Enter appliance data:");
             System.out.print("\tEnabled(0=no, 1=yes): ");
             int enabled = scanner.nextInt();
-            if (enabled != 0 && enabled != 1)
-            {
+            if (enabled != 0 && enabled != 1) {
                 throw new IndexOutOfBoundsException();
             }
-            if (enabled == 0)
-            {
-                app.setEnabled(false);
-            }
-            else
-            {
-                app.setEnabled(true);
-            }
+            app.setEnabled(enabled != 0);
             System.out.print("\tPower: ");
             double power = scanner.nextDouble();
             scanner.nextLine();
@@ -106,69 +95,51 @@ public class NetworkTest {
     }
 
     public static AppType getType() throws Exception {
-
-       // AppType type;// = AppType.DRILL;
-        boolean error = true;
         int index = 1;
-
+        boolean error = true;
         while(error) {
             error = false;
             System.out.println("Choose appliance type:");
-            index = 1;
             for (AppType elem : AppType.values()) {
-                System.out.println("\t" + index++ + ". " + elem);
+                System.out.println(index++ + ". " + elem);
             }
             try {
                 index = scanner.nextInt();
                 scanner.nextLine();
-/*                if (index > AppType.values().length || index < 1) {
-                    throw new IndexOutOfBoundsException();
-                }*/
-            }catch (IndexOutOfBoundsException eIndex){
-
             }
             catch (Exception exception) {
                 System.out.println("Error: " + exception.getLocalizedMessage());
                 error = true;
             }
         }
-
         switch (index) {
             case 1:
                 return AppType.DRILL;
-
             case 2:
                 return AppType.CHAINSAW;
-               // break;
             case 3:
                 return AppType.WASHER;
-                //break;
             case 4:
                 return AppType.KETTLE;
-               // break;
             default:
-                throw new Exception("wrong");
+                throw new Exception("Wrong type");
         }
-
     }
 
-    public static int getIndex(Network network)
-    {
+    public static int getIndex(Network network) {
         int index = 0;
         boolean error = true;
         while(error)
-        try
-        {
+        try {
             error = false;
+            System.out.println("Choose index");
             index = scanner.nextInt();
             scanner.nextLine();
-            if (index > network.getAppliances().size() || index < 1)
-            {
+            if (index > network.getAppliances().size() || index < 1) {
                 throw new IndexOutOfBoundsException();
             }
         }
-        catch (Exception exception)
-        {
+        catch (Exception exception) {
             System.out.println("Error: " + exception.getLocalizedMessage());
             error = true;
         }
