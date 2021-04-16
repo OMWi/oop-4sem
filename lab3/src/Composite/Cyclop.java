@@ -1,5 +1,7 @@
-public class Centaur implements Unit {
-    private int strength = 80;
+package Composite;
+
+public class Cyclop implements Unit {
+    private int strength = 500;
 
     public int getStrength() {
         return strength;

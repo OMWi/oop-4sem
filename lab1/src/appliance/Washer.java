@@ -1,9 +1,7 @@
 package appliance;
 
-import appliance.AbstractHouseholdApp;
-
 public class Washer extends AbstractHouseholdApp {
-    public double coefficient;
+    private double coefficient;
 
     public void setCoefficient(double coefficient) {
         this.coefficient = coefficient;

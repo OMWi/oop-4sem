@@ -1,3 +1,5 @@
+package Composite;
+
 import java.util.ArrayList;
 
 public class Squad implements Unit {

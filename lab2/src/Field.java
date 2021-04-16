@@ -5,14 +5,14 @@ public class Field {
     //need to add number of turns
 
     //for saving
-    public Memento createMemento() {
-        Memento memento = new Memento(field, size);
-        return memento;
+    public Save createMemento() {
+        Save save = new Save(field, size);
+        return save;
     }
 
     //for restoring
-    public void setMemento(Memento memento) {
-        field = memento.getState();
+    public void setMemento(Save save) {
+        field = save.getState();
     }
 
     public Field(int size, int length) {
@@ -30,6 +30,7 @@ public class Field {
     public String toString() {
         String data = "";
         for (int y = 0; y < size; y++) {
+            data += '\t';
             for (int x = 0; x < size; x++) {
                 data += Integer.toString(field[y][x]) + ' ';
             }

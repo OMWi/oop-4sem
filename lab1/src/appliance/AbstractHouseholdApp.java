@@ -1,9 +1,7 @@
 package appliance;
 
-import appliance.AbstractApp;
-
 public abstract class AbstractHouseholdApp extends AbstractApp {
-    public String color;
+    protected String color;
 
     public String getColor() {
         return color;

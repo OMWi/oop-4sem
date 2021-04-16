@@ -1,4 +1,4 @@
-public class Memento {
+public class Save {
     private int[][] field;
     public int[][] getState() {
         return field;
@@ -11,7 +11,7 @@ public class Memento {
             }
         }
     }
-    public Memento(int[][] field, int size) {
+    public Save(int[][] field, int size) {
         setState(field, size);
     }
 }

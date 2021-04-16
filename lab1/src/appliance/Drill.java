@@ -1,9 +1,7 @@
 package appliance;
 
-import appliance.AbstractIndustrialApp;
-
 public class Drill extends AbstractIndustrialApp {
-    public double coefficient;
+    private double coefficient;
 
     public void setCoefficient(double coefficient) {
         this.coefficient = coefficient;

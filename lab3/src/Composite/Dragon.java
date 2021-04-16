@@ -1,5 +1,7 @@
-public class Knight implements Unit {
-    private int strength = 20;
+package Composite;
+
+public class Dragon implements Unit {
+    private int strength = 6000;
 
     public int getStrength() {
         return strength;

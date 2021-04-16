@@ -2,34 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab24a50d-7c30-4061-a123-72a4f24ecaa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1.mdj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/NetworkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/NetworkTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/AbstractApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/AbstractApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/AbstractHouseholdApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/AbstractHouseholdApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/AbstractIndustrialApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/AbstractIndustrialApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/AppFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/AppFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/AppFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/AppFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/AppType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/AppType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/Chainsaw.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/Chainsaw.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/Drill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/Drill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/Kettle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/Kettle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/Network.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/NetworkFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/appliance/Washer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/appliance/Washer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/printer/AppPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/printer/AppPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NetworkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/AbstractApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/AbstractApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/AbstractHouseholdApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/AbstractHouseholdApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/AbstractIndustrialApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/AbstractIndustrialApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/Chainsaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/Chainsaw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/Drill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/Drill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/Kettle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/Kettle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appliance/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/appliance/NetworkFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/NetworkFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/appliance/Washer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/appliance/Washer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/printer/AppPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/printer/AppPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/NetworkFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/NetworkFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Centaur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Centaur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Cyclop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Cyclop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Elf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Elf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Hydra.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Hydra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Minotaur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Minotaur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Orc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Orc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Recruiting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Recruiting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/src/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/Composite/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,5 +81,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

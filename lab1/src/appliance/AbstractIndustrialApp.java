@@ -1,7 +1,7 @@
 package appliance;
 
 public abstract class AbstractIndustrialApp extends AbstractApp {
-    public String industry;
+    protected String industry;
 
     public String getIndustry() {
         return industry;

@@ -1,5 +1,7 @@
-public class Orc implements Unit {
-    private int strength = 50;
+package Composite;
+
+public class Hydra implements Unit {
+    private int strength = 5000;
 
     public int getStrength() {
         return strength;

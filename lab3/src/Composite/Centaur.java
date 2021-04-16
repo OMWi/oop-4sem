@@ -1,5 +1,7 @@
-public class Elf implements Unit {
-    private int strength = 40;
+package Composite;
+
+public class Centaur implements Unit {
+    private int strength = 80;
 
     public int getStrength() {
         return strength;

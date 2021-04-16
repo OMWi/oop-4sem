@@ -1,7 +1,7 @@
 /*
 Паттерн Memento.
-Реазлизовать алгоритм игры судоку/крестики нолики.
-Реализовать возможность "взять ход назад
+Реализовать алгоритм игры судоку/крестики нолики.
+Реализовать возможность "взять ход назад"
 */
 
 import java.util.Scanner;
@@ -13,11 +13,14 @@ public class Game {
         System.out.println("Game settings:");
         System.out.print("  Field size: ");
         int size = scanner.nextInt();
+        if (size < 3) size = 3;
         System.out.print("  Length of line to win: ");
         int winnerLength = scanner.nextInt();
+        if (winnerLength > size) winnerLength = size;
+        if (winnerLength < 3) winnerLength = 3;
 
         Field field = new Field(size, winnerLength);
-        Caretaker caretaker = new Caretaker(field.createMemento());
+        SaveManager saveManager = new SaveManager(field.createMemento());
         int winner = 0; int turnsAmount = 0; int numberOfCells = size*size;
         while (winner == 0) {
             for (int player = 1; player <= 2 && winner == 0; player++) {
@@ -32,9 +35,9 @@ public class Game {
                     turnsAmount++;
                     System.out.println(field);
                     System.out.printf("Confirm(yes=1, no=0)? ");
-                    int option = scanner.nextInt();
+                    int option = scanner.next().charAt(0);
                     if (option == 0) {
-                        field.setMemento(caretaker.getMemento());
+                        field.setMemento(saveManager.getMemento());
                         turnsAmount--;
                         confirm = false;
                     }
@@ -59,9 +62,8 @@ public class Game {
     }
 
     public static int[] askLocation() {
-        System.out.print("x = ");
+        System.out.print("x, y = ");
         int x = scanner.nextInt();
-        System.out.print("y = ");
         int y = scanner.nextInt();
         return new int[]{--x, --y};
     }

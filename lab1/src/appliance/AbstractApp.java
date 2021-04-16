@@ -2,10 +2,10 @@ package appliance;
 
 public abstract class AbstractApp {
     private static int ID;
-    public int id;
-    public boolean enabled;
-    public double power;
-    public double price;
+    private int id;
+    private boolean enabled;
+    protected double power;
+    protected double price;
 
     public int getId() {
         return id;

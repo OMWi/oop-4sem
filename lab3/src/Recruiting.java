@@ -1,3 +1,5 @@
+import Composite.*;
+
 public class Recruiting {
     public static void main(String[] args) {
         Unit army1 = new Squad();

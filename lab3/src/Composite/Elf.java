@@ -1,5 +1,7 @@
-public class Hydra implements Unit {
-    private int strength = 5000;
+package Composite;
+
+public class Elf implements Unit {
+    private int strength = 40;
 
     public int getStrength() {
         return strength;
