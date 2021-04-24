@@ -29,19 +29,23 @@ public class Game {
                     confirm = true;
                     System.out.println(field);
                     System.out.println(player + " player's turn");
+                    saveManager.setMemento(field.createMemento());
                     play(field, player);
-                    winner = field.checkWinner();
-                    if (winner > 0) break;
-                    turnsAmount++;
                     System.out.println(field);
+                    turnsAmount++;
                     System.out.printf("Confirm(yes=1, no=0)? ");
-                    int option = scanner.next().charAt(0);
+                    int option = scanner.nextInt();
                     if (option == 0) {
                         field.setMemento(saveManager.getMemento());
                         turnsAmount--;
                         confirm = false;
                     }
-                    if (turnsAmount == numberOfCells) break;
+                    winner = field.checkWinner();
+                    if (winner > 0) break;
+                    if (turnsAmount == numberOfCells) {
+                        winner = -1;
+                        break;
+                    }
                 }
             }
         }
@@ -51,7 +55,7 @@ public class Game {
         else if (winner == 2) {
             System.out.println("Player 2 won");
         }
-        else {
+        else if (winner == -1) {
             System.out.println("Draw");
         }
     }

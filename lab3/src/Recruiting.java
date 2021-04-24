@@ -2,13 +2,15 @@ import Composite.*;
 
 public class Recruiting {
     public static void main(String[] args) {
-        Unit army1 = new Squad();
-        Unit army2 = new Squad();
+        Unit army1 = new Army();
+        Unit army2 = new Army();
         recruitArmy1(army1);
         recruitArmy2(army2);
 
         System.out.println("Power of first army:" + army1.getStrength());
+        System.out.println(army1);
         System.out.println("Power of second army:" + army2.getStrength());
+        System.out.println(army2);
     }
 
     static void recruitArmy1(Unit army) {

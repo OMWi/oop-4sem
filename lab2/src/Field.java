@@ -40,7 +40,6 @@ public class Field {
     }
 
     public int checkWinner() {
-        int current = 0, previous = 0;
         int winner = 0;
         for (int y = 0; y < size; y++) {
             for (int x = 0; x < size; x++) {
@@ -53,7 +52,7 @@ public class Field {
                         if (statementX) {
                             winner = player;
                             for (int i = x + 1; i < x + winnerLength; i++) {
-                                if (field[y][i] != 1) {
+                                if (field[y][i] != player) {
                                     winner = 0;
                                     break;
                                 }
@@ -63,7 +62,7 @@ public class Field {
                         if (statementY) {
                             winner = player;
                             for (int i = y + 1; i < y + winnerLength; i++) {
-                                if (field[i][x] != 1) {
+                                if (field[i][x] != player) {
                                     winner = 0;
                                     break;
                                 }
@@ -73,7 +72,7 @@ public class Field {
                         if (statementX && statementY) {
                             winner = player;
                             for (int i = x + 1, j = y + 1; i < x + winnerLength; i++, j++) {
-                                if (field[j][i] != 1) {
+                                if (field[j][i] != player) {
                                     winner = 0;
                                     break;
                                 }
